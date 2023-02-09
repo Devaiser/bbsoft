@@ -1,0 +1,12 @@
+export { default as MainPage } from './MainPage.vue';
+export { default as NavBar } from './NavBar.vue';
+export { default as BaseButton } from './BaseButton.vue';
+export { default as SliderPage } from './SliderPage.vue';
+export { default as Social } from './Social.vue';
+export { default as BlueButton } from './BlueButton.vue';
+export { default as BlackButton } from './BlackButton.vue';
+export { default as FormPage } from './FormPage.vue';
+export { default as TeamPattern } from './TeamPattern.vue';
+export { default as TeamPage } from './TeamPage.vue';
+export { default as TeamAbout } from './TeamAbout.vue';
+export { default as Footer } from './Footer.vue';

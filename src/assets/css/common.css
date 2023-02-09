@@ -1,0 +1,197 @@
+body {
+  font-family: 'Fact';
+  font-weight: 300;
+  position: relative;
+  background: #000;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.section {
+  min-height: 100vh;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.yellow-gradient {
+  text-transform: uppercase;
+  background: linear-gradient(98.27deg, #ffa71a 0%, #000000 180.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.white-gradient {
+  text-transform: uppercase;
+  background: linear-gradient(98.27deg, #ffffff 0%, #000000 130%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.blue-gradient {
+  text-transform: uppercase;
+  background: linear-gradient(98.27deg, #21e7d6 0%, #83daff 105.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gray-gradient {
+  text-transform: uppercase;
+  background: linear-gradient(98.27deg, #888686 0%, #000000 140.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.section-title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.06;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 1.06;
+  text-transform: uppercase;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.text.big {
+  font-size: 22px;
+}
+.white {
+  color: #fff;
+}
+.gray {
+  color: #888686;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom, #000 15%, rgba(0, 0, 0, 0));
+  z-index: 0;
+}
+.gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to top, #000 15%, rgba(0, 0, 0, 0));
+  z-index: 0;
+}
+.gradient-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+  z-index: 5;
+}
+.gradient-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to left, #000, rgba(0, 0, 0, 0));
+  z-index: 5;
+}
+
+.swiper-pagination-bullet:not(:last-child) {
+  margin-right: 35px !important;
+}
+.swiper-pagination-bullet {
+  background: linear-gradient(180deg, #878581 21.88%, rgba(3, 3, 3, 0) 100%);
+  width: 21px;
+  height: 21px;
+  transition: all 0.3s ease 0s;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: linear-gradient(180deg, #ffa71a 57.81%, rgba(3, 3, 3, 0) 100%);
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 54px;
+  }
+  .section-subtitle {
+    font-size: 40px;
+  }
+  .text.big {
+    font-size: 18px;
+  }
+}
+@media (max-width: 556px) {
+  .section-title {
+    font-size: 36px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .section-subtitle {
+    font-size: 32px;
+  }
+  .text.big {
+    font-size: 16px;
+  }
+}
