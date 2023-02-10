@@ -12,15 +12,25 @@
         <nav class="menu__body" :class="{ active: isMenuVisible }">
           <ul class="menu__list">
             <li>
-              <a class="menu__link" target="_blank" href="/">BBAPP</a>
+              <a class="menu__link disabled" target="_blank" href="/"
+                >BBAPP (Coming Soon)</a
+              >
             </li>
             <li>
-              <a class="menu__link" target="_blank" href="/"
+              <a
+                class="menu__link"
+                target="_blank"
+                href="https://bbsoft-io.gitbook.io/bbsoft-ecosystem/bbecosystem/endorsed-by-bbsoft"
                 >ENDORSED BY BBSOFT</a
               >
             </li>
             <li>
-              <a href="/" target="_blank" class="menu__link">DOCUMENTATION</a>
+              <a
+                href="https://bbsoft-io.gitbook.io/bbsoft-ecosystem/intro/introduction"
+                target="_blank"
+                class="menu__link"
+                >DOCUMENTATION</a
+              >
             </li>
           </ul>
         </nav>
@@ -77,7 +87,10 @@
   .menu__icon {
     display: none;
   }
-  @media (min-width: 555px) {
+  .disabled {
+    pointer-events: none;
+  }
+  @media (min-width: 767px) {
     .menu__body {
       display: flex;
     }
@@ -96,7 +109,7 @@
       margin-right: 40px;
     }
   }
-  @media (max-width: 556px) {
+  @media (max-width: 768px) {
     .header {
       padding: 25px 0;
     }
@@ -185,54 +198,17 @@
       justify-content: flex-end;
     }
   }
+  @media (max-width: 556px) {
+    .menu__list li {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 360px) {
+    .menu__list li {
+      font-size: 16px;
+    }
+    .menu__body {
+      padding: 100px 44px 160px 55px;
+    }
+  }
 </style>
-
-<!-- <template>
-  <header class="header">
-    <ul class="header__list">
-      <li>
-        <a href="/" class="header__link">
-          <span> BBAPP </span>
-        </a>
-      </li>
-      <li>
-        <a href="/" class="header__link">
-          <span> ENDORSED BY BBSOFT </span>
-        </a>
-      </li>
-      <li>
-        <a href="/" class="header__link">
-          <span> DOCUMENTATION </span>
-        </a>
-      </li>
-    </ul>
-  </header>
-</template>
-<script setup>
-</script>
-<style scoped>
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 46px;
-    box-sizing: border-box;
-    z-index: 5;
-  }
-  .header__list {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .header__list li:not(:last-child) {
-    margin-right: 30px;
-  }
-  .header__link span {
-    text-transform: uppercase;
-    color: #888686;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.25;
-    font-family: 'Inter', sans-serif;
-  }
-</style> -->

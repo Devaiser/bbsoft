@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" class="button">
+  <a :href="link" class="button" :class="{ disabled: !link }">
     <span>
       {{ value }}
     </span>
@@ -14,7 +14,6 @@
     link: {
       type: String,
       required: false,
-      default: '/',
     },
   });
 </script>
@@ -35,5 +34,8 @@
     font-size: 16px;
     line-height: 1.25;
     color: #21e7d6;
+  }
+  .disabled {
+    pointer-events: none;
   }
 </style>

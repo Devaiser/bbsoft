@@ -5,7 +5,7 @@
         <div class="footer__logo">
           <img src="/img/bbsoft-logo.png" alt="bbsoft-logo" class="image" />
         </div>
-        <router-link to="/" class="user-agr__link">
+        <router-link to="/agreements" class="user-agr__link">
           <span class="yellow-gradient">USER </span>
           <span class="gray-gradient">AGREEMENT</span>
         </router-link>
@@ -27,15 +27,15 @@
     </div>
     <div class="footer__item second">
       <div class="footer-col-item">
-        <a href="">BBPLACE</a>
-        <a href="">BBAPP</a>
-        <a href="">BBDEX</a>
-        <a href="">MOOVY</a>
+        <a class="disabled" href="">BBPLACE (Coming Soon)</a>
+        <a href="" class="disabled">BBAPP (Coming Soon)</a>
+        <a target="_blank" href="https://bbdex.io">BBDEX</a>
+        <a target="_blank" href="https://moovy.io/">MOOVY</a>
       </div>
       <div class="footer-col-item">
-        <a href="">TELEGRAM</a>
-        <a href="">TWITTER</a>
-        <a href="">INSTAGRAM</a>
+        <a target="_blank" href="https://t.me/moovy_io">TELEGRAM</a>
+        <a target="_blank" href="https://twitter.com/moovy_io">TWITTER</a>
+        <a target="_blank" href="https://instagram.com/moovy_io">INSTAGRAM</a>
       </div>
     </div>
     <div class="footer__item third media">
@@ -87,6 +87,9 @@
     margin-bottom: 10px;
     padding: 0 10px;
     color: #888686;
+  }
+  .footer__item.second a.disabled {
+    pointer-events: none;
   }
   .footer__item.second a:not(:last-child) {
     margin-right: 67px;
@@ -154,6 +157,14 @@
     }
     .footer__item.second a {
       margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 556px) {
+    .footer-col-item:not(:last-child) {
+      margin-right: 0px;
+    }
+    .footer {
+      padding: 20px 0;
     }
   }
 </style>

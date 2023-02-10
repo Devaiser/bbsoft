@@ -42,7 +42,7 @@
                 events on the exclusive BBLaunch
               </p>
               <div class="button-wrapper">
-                <BaseButton value="learn more" />
+                <BaseButton value="Coming Soon" />
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
                 access to exclusive game tokens on the proprietary DEX
               </p>
               <div class="button-wrapper">
-                <BaseButton value="learn more" />
+                <BaseButton value="learn more" link="https://bbdex.io" />
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
                 more!
               </p>
               <div class="button-wrapper">
-                <BaseButton value="learn more" />
+                <BaseButton value="coming soon" />
               </div>
             </div>
           </div>

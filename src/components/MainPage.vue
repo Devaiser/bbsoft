@@ -13,7 +13,10 @@
         We are creating a single ecosystem that will cover all the needs of the
         player in the world of Web3 games
       </p>
-      <BaseButton value="Learn more" />
+      <BaseButton
+        value="Learn more"
+        link="https://bbsoft-io.gitbook.io/bbsoft-ecosystem/intro/introduction"
+      />
     </div>
     <div class="main-bg">
       <video preload="metadata" autoplay muted loop playsinline class="video">
@@ -38,6 +41,8 @@
     width: 204px;
     position: relative;
     z-index: 1;
+    user-select: none;
+    pointer-events: none;
   }
   .main__content {
     margin-left: 16.43vw;

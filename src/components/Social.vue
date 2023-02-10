@@ -11,9 +11,9 @@
     </div>
     <div class="social__content">
       <div class="social__buttons">
-        <BlueButton value="Twitter" />
-        <BlueButton value="Telegram" />
-        <BlueButton value="Website" />
+        <BlueButton value="Twitter" link="https://twitter.com/moovy_io" />
+        <BlueButton value="Telegram" link="https://t.me/moovyglobal" />
+        <BlueButton value="Website" link="https://moovy.io/" />
       </div>
       <div class="stores__buttons">
         <BlackButton value="AppStore" />

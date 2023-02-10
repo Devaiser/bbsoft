@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" class="button">
+  <a :href="link" target="_blank" class="button" :class="{ disabled: !link }">
     <span>{{ value }}</span>
   </a>
 </template>
@@ -12,7 +12,6 @@
     link: {
       type: String,
       required: false,
-      default: '/',
     },
   });
 </script>
@@ -36,6 +35,9 @@
     font-size: 15px;
     line-height: 1.06;
     text-transform: uppercase;
+  }
+  .disabled {
+    pointer-events: none;
   }
   @media (max-width: 992px) {
     .button {
