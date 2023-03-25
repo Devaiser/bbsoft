@@ -6,10 +6,10 @@ body {
   user-select: none;
 }
 
-#app.smooth-scroll {
+/* #app.smooth-scroll {
   height: 100vh;
   overflow: auto;
-}
+} */
 
 body.lock {
   overflow: hidden;

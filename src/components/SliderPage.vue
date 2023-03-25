@@ -109,169 +109,174 @@
     <div class="gradient-top"></div>
     <div class="gradient-bottom"></div>
     <div class="bg">
-      <img src="/img/bg.jpg" alt="bg" class="image" />
+      <video preload="metadata" autoplay muted loop playsinline class="video">
+        <source type="video/mp4" src="/video/bg.mp4" v-if="width > 556" />
+        <source type="video/mp4" src="/video/media-bg.mp4" v-else />
+        <img src="/img/bg.jpg" alt="bg" class="image" />
+      </video>
     </div>
   </section>
 </template>
 <script setup>
-  import { ref, watch } from 'vue';
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-  import { BaseButton } from '@/components';
-  import { Navigation, Pagination } from 'swiper';
-  import { useWindowSize } from '@vueuse/core';
+import { ref } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { BaseButton } from '@/components';
+import { Navigation, Pagination } from 'swiper';
 
-  import 'swiper/css';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
+import { useWindowSize } from '@vueuse/core';
 
-  const { width, height } = useWindowSize();
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-  const pagination = ref({
-    el: '.slider-pagination',
-    clickable: true,
-  });
-  const paginationMedia = ref({
-    el: '.slider-pagination-media',
-    clickable: true,
-  });
+const { width } = useWindowSize();
 
-  const breakpoints = {
-    767: {
-      pagination: pagination.value,
-    },
-  };
+const pagination = ref({
+  el: '.slider-pagination',
+  clickable: true,
+});
+const paginationMedia = ref({
+  el: '.slider-pagination-media',
+  clickable: true,
+});
 
-  const navigation = {
-    nextEl: '.slider-button-next',
-    prevEl: '.slider-button-prev',
-  };
+const breakpoints = {
+  767: {
+    pagination: pagination.value,
+  },
+};
 
-  const modules = [Navigation, Pagination];
+const navigation = {
+  nextEl: '.slider-button-next',
+  prevEl: '.slider-button-prev',
+};
+
+const modules = [Navigation, Pagination];
 </script>
 <style scoped>
-  .section {
-    position: relative;
-    margin-top: 100px;
-  }
-  .slider-wrapper {
-    margin-top: 50px;
-    position: relative;
-    z-index: 1;
-  }
-  .slider-title {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    padding: 0 40px;
-    /* top: -60px; */
-  }
-  .slide-image {
-    width: 45vw;
-  }
-  .slide-body {
-    display: flex;
-    align-items: center;
-  }
+.section {
+  position: relative;
+  margin-top: 100px;
+}
+.slider-wrapper {
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+.slider-title {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 40px;
+  /* top: -60px; */
+}
+.slide-image {
+  width: 45vw;
+}
+.slide-body {
+  display: flex;
+  align-items: center;
+}
+.slide-content {
+  max-width: 32vw;
+  margin-bottom: 60px;
+  margin-left: 40px;
+}
+.slider-text {
+  margin: 35px 0 52px 0;
+}
+.slider-pagination {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.slider-navigation.media {
+  display: none;
+}
+.slider-navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 105px;
+}
+.slider-button-prev {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.slider-button-next {
+  cursor: pointer;
+}
+.slider-button-next,
+.slider-button-prev {
+  transition: all 0.3s ease 0s;
+}
+.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: auto;
+}
+@media (max-width: 1200px) {
   .slide-content {
-    max-width: 32vw;
-    margin-bottom: 60px;
-    margin-left: 40px;
+    max-width: 42vw;
   }
-  .slider-text {
-    margin: 35px 0 52px 0;
+}
+@media (max-width: 992px) {
+  .section {
+    min-height: auto;
+    margin-top: 0px;
   }
-  .slider-pagination {
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .slider-navigation.media {
+}
+@media (max-width: 768px) {
+  .slider-navigation {
     display: none;
   }
-  .slider-navigation {
+  .slider-pagination-media {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 105px;
+    justify-content: center;
+    margin-right: 0;
+    padding: 0 40px;
   }
   .slider-button-prev {
-    margin-right: 30px;
-    cursor: pointer;
+    margin-right: 0;
   }
-  .slider-button-next {
-    cursor: pointer;
+  .slider-navigation.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    padding: 0 20px;
+    width: fit-content;
+    margin: 0 auto;
   }
-  .slider-button-next,
-  .slider-button-prev {
-    transition: all 0.3s ease 0s;
+  .slider-pagination {
+    display: none;
   }
-  .swiper-button-disabled {
-    opacity: 0.4;
-    cursor: auto;
+  .slide-body {
+    flex-direction: column;
+    text-align: center;
   }
-  @media (max-width: 1200px) {
-    .slide-content {
-      max-width: 42vw;
-    }
+  .slide-content {
+    margin: 0;
+    max-width: 70vw;
+    margin-bottom: 40px;
   }
-  @media (max-width: 992px) {
-    .section {
-      min-height: auto;
-      margin-top: 0px;
-    }
+  .slide-image {
+    width: 50vw;
   }
-  @media (max-width: 768px) {
-    .slider-navigation {
-      display: none;
-    }
-    .slider-pagination-media {
-      display: flex;
-      justify-content: center;
-      margin-right: 0;
-      padding: 0 40px;
-    }
-    .slider-button-prev {
-      margin-right: 0;
-    }
-    .slider-navigation.media {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 0;
-      padding: 0 20px;
-      width: fit-content;
-      margin: 0 auto;
-    }
-    .slider-pagination {
-      display: none;
-    }
-    .slide-body {
-      flex-direction: column;
-      text-align: center;
-    }
-    .slide-content {
-      margin: 0;
-      max-width: 70vw;
-      margin-bottom: 40px;
-    }
-    .slide-image {
-      width: 50vw;
-    }
-    .button-wrapper {
-      display: flex;
-      justify-content: center;
-    }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
   }
-  @media (max-width: 556px) {
-    .slide-image {
-      width: 80vw;
-    }
-    .slide-content {
-      max-width: 100vw;
-      padding: 0 20px;
-    }
-    .slider-text {
-      margin: 20px 0 40px 0;
-    }
+}
+@media (max-width: 556px) {
+  .slide-image {
+    width: 80vw;
   }
+  .slide-content {
+    max-width: 100vw;
+    padding: 0 20px;
+  }
+  .slider-text {
+    margin: 20px 0 40px 0;
+  }
+}
 </style>

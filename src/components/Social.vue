@@ -16,8 +16,8 @@
         <BlueButton value="Website" link="https://moovy.io/" />
       </div>
       <div class="stores__buttons">
-        <BlackButton value="AppStore" descr="(Comming Soon)" />
-        <BlackButton value="Google Play" descr="(Comming Soon)" />
+        <BlackButton value="AppStore" descr="(Coming Soon)" />
+        <BlackButton value="Google Play" descr="(Coming Soon)" />
       </div>
       <p class="text white">
         Moovy is a drive2earn project that combines the best of both online
